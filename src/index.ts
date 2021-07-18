@@ -8,8 +8,6 @@ export function KillProcess(pid: number) {
             cp.exec(
                 "taskkill /PID " + pid + " /T /F",
                 function (error, stdout, stderr) {
-                    // console.log('stdout: ' + stdout);
-                    // console.log('stderr: ' + stderr);
                     if (error !== null) {
                         reject(error);
                     } else {
